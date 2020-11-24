@@ -1,4 +1,4 @@
-FROM maven:3-jdk-8
+FROM maven:3-jdk-8 as build
 
 RUN mkdir -p /webapp
 WORKDIR /webapp
@@ -11,8 +11,19 @@ RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml dependency:resolve
 COPY . .
 RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package
 
+FROM openjdk:8
+RUN mkdir /app
+COPY --from=build /webapp/target/webapp-1.0-SNAPSHOT.jar /java/webapp.jar
+COPY --from=build /webapp/config.yml /java/config.yml
+
+RUN groupadd -r java
+RUN useradd -r -g java -d /java -s /sbin/nologin -c "Java runner user" java
+RUN chown -R java:java /java
+USER java
+
 EXPOSE 8080
 EXPOSE 8081
+WORKDIR /javaapp
 
-ENTRYPOINT ["java", "-jar", "target/webapp-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "webapp.jar"]
 CMD ["server", "config.yml"]
