@@ -5,11 +5,11 @@ WORKDIR /webapp
 
 # Build up Maven repo cache
 COPY pom.xml .
-RUN mvn -B dependency:resolve
+RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml dependency:resolve
 
 # Now do actual application build (image layer cache will be used for above if no pom.xml changes)
 COPY . .
-RUN mvn -B package
+RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package
 
 EXPOSE 8080
 EXPOSE 8081
