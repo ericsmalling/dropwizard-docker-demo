@@ -1,4 +1,4 @@
-package xyz.smalls.goingnowhere.health;
+package xyz.smalls.dropwizdemo.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

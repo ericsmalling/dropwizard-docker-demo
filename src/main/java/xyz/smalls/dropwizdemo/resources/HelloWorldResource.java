@@ -1,7 +1,7 @@
-package xyz.smalls.goingnowhere.resources;
+package xyz.smalls.dropwizdemo.resources;
 
 import com.codahale.metrics.annotation.Timed;
-import xyz.smalls.goingnowhere.api.Saying;
+import xyz.smalls.dropwizdemo.api.Saying;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

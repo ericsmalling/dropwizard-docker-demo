@@ -3,4 +3,4 @@ defaultName: Stranger
 logging:
   level: INFO
   loggers:
-    xyz.smalls.goingnowhere: DEBUG
+    xyz.smalls.dropwizdemo: DEBUG

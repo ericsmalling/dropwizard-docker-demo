@@ -1,4 +1,4 @@
-package xyz.smalls.goingnowhere.api;
+package xyz.smalls.dropwizdemo.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

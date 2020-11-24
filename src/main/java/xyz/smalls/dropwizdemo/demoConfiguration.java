@@ -1,12 +1,11 @@
-package xyz.smalls.goingnowhere;
+package xyz.smalls.dropwizdemo;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.validator.constraints.*;
-import javax.validation.constraints.*;
+
 import javax.validation.constraints.NotEmpty;
 
-public class goingnowhereConfiguration extends Configuration {
+public class demoConfiguration extends Configuration {
     @NotEmpty
     private String template;
 

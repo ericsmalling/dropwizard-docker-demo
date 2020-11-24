@@ -1,29 +1,29 @@
-package xyz.smalls.goingnowhere;
+package xyz.smalls.dropwizdemo;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import xyz.smalls.goingnowhere.health.TemplateHealthCheck;
-import xyz.smalls.goingnowhere.resources.HelloWorldResource;
+import xyz.smalls.dropwizdemo.health.TemplateHealthCheck;
+import xyz.smalls.dropwizdemo.resources.HelloWorldResource;
 
-public class goingnowhereApplication extends Application<goingnowhereConfiguration> {
+public class demoApplication extends Application<demoConfiguration> {
 
     public static void main(final String[] args) throws Exception {
-        new goingnowhereApplication().run(args);
+        new demoApplication().run(args);
     }
 
     @Override
     public String getName() {
-        return "goingnowhere";
+        return "dropwizdemo";
     }
 
     @Override
-    public void initialize(final Bootstrap<goingnowhereConfiguration> bootstrap) {
+    public void initialize(final Bootstrap<demoConfiguration> bootstrap) {
         // TODO: application initialization
     }
 
     @Override
-    public void run(final goingnowhereConfiguration configuration,
+    public void run(final demoConfiguration configuration,
                     final Environment environment) {
         final HelloWorldResource resource = new HelloWorldResource(
                 configuration.getTemplate(),

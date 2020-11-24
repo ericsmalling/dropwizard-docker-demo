@@ -6,18 +6,18 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>xyz.smalls.goingnowhere</groupId>
+    <groupId>xyz.smalls.dropwizdemo</groupId>
     <artifactId>webapp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>goingnowhere</name>
+    <name>dropwizdemo</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dropwizard.version>2.0.15</dropwizard.version>
-        <mainClass>xyz.smalls.goingnowhere.goingnowhereApplication</mainClass>
+        <mainClass>xyz.smalls.dropwizdemo.demoApplication</mainClass>
     </properties>
 
     <dependencyManagement>

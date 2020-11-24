@@ -1,6 +1,6 @@
-# goingnowhere
+# dropwizdemo
 
-How to start the goingnowhere application
+How to start the dropwizdemo application
 ---
 
 1. Run `mvn clean install` to build your application
