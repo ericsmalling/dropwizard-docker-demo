@@ -1,5 +1,5 @@
-template: Hello, %s!
-defaultName: Stranger
+template: Howdy, %s!
+defaultName: SnykLive Folks
 logging:
   level: INFO
   loggers:
